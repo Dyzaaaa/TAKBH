@@ -1,24 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Klinik Buah Hati</title>
-  @vite('resources/css/app.css') 
+  <title>Dashboard Klinik</title>
+
+  @vite(['resources/css/app.css', 'resources/css/custom.css', 'resources/css/tabel.css'])
+
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/flowbite/dist/flowbite.min.css" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/flowbite/dist/flowbite.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flowbite/dist/flowbite.min.js"></script>
 
 </head>
 <body class="bg-gray-100">
 
   @include('layouts.dokter')
 
-  <main class="lg:ml-64 md:ml-48 pt-10 px-4">
-  <div class> 
-    <div class="flex justify-center mb-4">
-      <h1 class="center text-2xl font-bold dark:text-white">Jadwal Dokter</h1>
+  <main class="lg:ml-64 md:ml-48 px-4 mb-20">
+    <div>
+      <h1 class="judul-halaman">Jadwal Dokter</h1>
     </div>
 
 <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
