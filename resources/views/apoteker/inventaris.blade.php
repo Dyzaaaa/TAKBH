@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Klinik Buah Hati - Inventaris</title>
-  
-  @vite(['resources/css/app.css', 'resources/css/custom.css'])
+
+  @vite(['resources/css/app.css',  'resources/css/custom.css', 'resources/css/tabel.css'])
 
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
@@ -19,7 +19,6 @@
   @include('layouts.apoteker')
 
   <main class="lg:ml-64 md:ml-48 px-4 mb-20">
-    <!-- Header dengan tombol tambah -->
     <div class="flex justify-between items-center mb-4">
       <h1 class="judul-halaman">Inventaris</h1>
       <a href="{{ route('apoteker.inven-tambah') }}" class="btn-tambah">
@@ -27,28 +26,27 @@
       </a>
     </div>
 
-    <!-- Tabel Inventaris -->
     <div class="relative overflow-x-auto shadow-md rounded-lg">
-      <table class="w-full text-sm text-gray-700 dark:text-gray-400">
+      <table class="inventaris-table w-full text-sm">
         <thead>
           <tr>
-            <th class>NO</th>
-            <th class>NAMA PRODUK</th>
-            <th class>JUMLAH STOK</th>
-            <th class>HARGA BELI (/PCS)</th>
-            <th class>HARGA JUAL (/PCS)</th>
-            <th class>AKSI</th>
+            <th>NO</th>
+            <th>NAMA PRODUK</th>
+            <th>JUMLAH STOK</th>
+            <th>HARGA BELI (/PCS)</th>
+            <th>HARGA JUAL (/PCS)</th>
+            <th>AKSI</th>
           </tr>
         </thead>
         <tbody>
           @foreach ($dataobat as $k)
-          <tr class="border-b dark:bg-gray-800 border-gray-200">
-            <td class="px-6 py-3 font-medium text-gray-900 dark:text-white">{{ $loop->iteration }}</td>
-            <td class>{{ $k->nama_obat }}</td>
-            <td class>{{ number_format($k->jumlah_stok, 0, ',', '.') }}</td>
-            <td class>Rp. {{ number_format($k->harga_beli, 0, ',', '.') }}</td>
-            <td class>Rp. {{ number_format($k->harga_jual, 0, ',', '.') }}</td>
-            <td class>
+          <tr class="border-b dark:border-gray-200">
+            <td class="px-4 py-2 font-medium">{{ $loop->iteration }}</td>
+            <td>{{ $k->nama_obat }}</td>
+            <td>{{ number_format($k->jumlah_stok, 0, ',', '.') }}</td>
+            <td>Rp. {{ number_format($k->harga_beli, 0, ',', '.') }}</td>
+            <td>Rp. {{ number_format($k->harga_jual, 0, ',', '.') }}</td>
+            <td>
               <a href="{{ route('apoteker.inven-edit', $k->obat_id) }}" class="btn-action btn-edit"> <i class="fas fa-edit"></i>Edit</a>
               <form action="{{ route('apoteker.aptDaBatDelete', $k->obat_id) }}" method="POST" class="inline">
                 @csrf

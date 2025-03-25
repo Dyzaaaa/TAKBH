@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Klinik Buah Hati</title>
-  @vite('resources/css/app.css')
+  @vite(['resources/css/app.css', 'resources/css/custom.css', 'resources/css/form.css'])
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
   <link href="https://cdn.jsdelivr.net/npm/flowbite/dist/flowbite.min.css" rel="stylesheet">
@@ -15,7 +15,7 @@
 
   @include('layouts.apoteker')
 
-  <main class="lg:ml-64 md:ml-48 pt-10 px-4 pb-5">
+  <main class="lg:ml-64 md:ml-48 px-4 pb-5">
     <div class="max-w-6xl w-full bg-white rounded-lg shadow p-6 md:p-8 mb-5">
       <div class="flex justify-center mb-4">
         <h1 class="text-2xl font-bold dark:text-white">Form Transaksi</h1>

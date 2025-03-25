@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dashboard Klinik</title>
-  
-  @vite('resources/css/app.css')
+
+  @vite(['resources/css/app.css', 'resources/css/custom.css', 'resources/css/tabel.css'])
 
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
@@ -19,53 +19,49 @@
   @include('layouts.apoteker')
 
   <main class="lg:ml-64 md:ml-48 px-4 mb-20">
-     
-    <!-- Statistik -->
-    <section class>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <!-- Card Pasien Minggu Ini -->
-        <div class="p-6 bg-gradient-to-r from-green-500 to-green-400 text-white shadow-lg rounded-lg transform hover:scale-105 transition-transform duration-300">
-          <h2 class="text-3xl font-bold">400</h2>
-          <p class="text-lg">Pasien Minggu Ini</p>
-          <div class="mt-4">
-            <span class="text-sm bg-green-600 px-2 py-1 rounded-full">+5% dari minggu lalu</span>
+
+    <section>
+      <h1 class="judul-halaman">Statistik</h1>
+      <div class="statistik-card-grid">
+      <div class="statistik-card statistik-card-1">
+          <h2 class="statistik-angka">400</h2>
+          <p class="statistik-deskripsi">Pasien Minggu Ini</p>
+          <div class="statistik-indikator">
+            <span class="statistik-indikator-text statistik-indikator-positif">+5% dari minggu lalu</span>
           </div>
         </div>
 
-        <!-- Card Obat Terlaris -->
-        <div class="p-6 bg-gradient-to-r from-green-600 to-green-500 text-white shadow-lg rounded-lg transform hover:scale-105 transition-transform duration-300">
-          <h2 class="text-3xl font-bold">Paracetamol</h2>
-          <p class="text-lg">Obat Terlaris</p>
-          <div class="mt-4">
-            <span class="text-sm bg-green-700 px-2 py-1 rounded-full">120 terjual</span>
+      <div class="statistik-card statistik-card-2">
+          <h2 class="statistik-angka">Paracetamol</h2>
+          <p class="statistik-deskripsi">Obat Terlaris</p>
+          <div class="statistik-indikator">
+            <span class="statistik-indikator-text statistik-indikator-positif">120 terjual</span>
           </div>
         </div>
 
-        <!-- Card Dokter Terpopuler -->
-        <div class="p-6 bg-gradient-to-r from-green-700 to-green-600 text-white shadow-lg rounded-lg transform hover:scale-105 transition-transform duration-300">
-          <h2 class="text-3xl font-bold">Dr. Cinta</h2>
-          <p class="text-lg">Dokter Terpopuler</p>
-          <div class="mt-4">
-            <span class="text-sm bg-green-800 px-2 py-1 rounded-full">200 kunjungan</span>
+      <div class="statistik-card statistik-card-3">
+          <h2 class="statistik-angka">Dr. Cinta</h2>
+          <p class="statistik-deskripsi">Dokter Terpopuler</p>
+          <div class="statistik-indikator">
+            <span class="statistik-indikator-text statistik-indikator-positif">200 kunjungan</span>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Grafik Statistik -->
-    <section class="mt-5 ">
-      <div class="bg-white shadow-lg rounded-lg p-6  overflow-hidden">
-        <div class="flex justify-between items-center mb-4">
-          <h2 class="text-xl font-bold text-gray-900">Statistik Pasien</h2>
+    <section class="mt-5">
+      <div class="grafik-container">
+        <div class="grafik-header">
+          <h2 class="grafik-title">Statistik Pasien</h2>
           <div class="relative">
-            <button id="dropdownButton" class="bg-green-600 text-white px-4 py-2 rounded-lg shadow hover:bg-green-700 focus:outline-none flex items-center gap-2 transition-colors duration-300">
+            <button id="dropdownButton" class="dropdown-button">
               <span>Statistik</span>
               <i class="fas fa-chevron-down"></i>
             </button>
-            <div id="dropdownMenu" class="hidden absolute right-0 mt-2 w-48 bg-white border border-gray-200 shadow-lg rounded-lg z-10">
-              <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Pasien</a>
-              <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Obat</a>
-              <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Dokter</a>
+            <div id="dropdownMenu" class="hidden dropdown-menu">
+              <a href="#" class="dropdown-link">Pasien</a>
+              <a href="#" class="dropdown-link">Obat</a>
+              <a href="#" class="dropdown-link">Dokter</a>
             </div>
           </div>
         </div>
@@ -73,28 +69,27 @@
       </div>
     </section>
 
-    <!-- Jadwal Dokter -->
-    <section class="mt-5">
-      <h2 class="text-xl font-bold text-gray-900 mb-5">Jadwal Apoteker</h2>
-      <div class="overflow-x-auto bg-white shadow-lg rounded-lg">
-        <table class="min-w-full">
-          <thead class="bg-green-500 text-white">
+    <section class="mt-8">
+      <h2 class="judul-halaman">Jadwal Apoteker</h2>
+      <div class="jadwal-container">
+        <table class="jadwal-table">
+          <thead class="jadwal-thead">
             <tr>
-              <th class="px-6 py-4 text-left">Nama Dokter</th>
-              <th class="px-6 py-4 text-left">Hari</th>
-              <th class="px-6 py-4 text-left">Jam</th>
+              <th class="jadwal-th">Nama Dokter</th>
+              <th class="jadwal-th">Hari</th>
+              <th class="jadwal-th">Jam</th>
             </tr>
           </thead>
-          <tbody class="divide-y divide-gray-200">
-            <tr class="hover:bg-gray-50 transition-colors duration-300">
-              <td class="px-6 py-4">Dr. Cinta</td>
-              <td class="px-6 py-4">Senin - Jumat</td>
-              <td class="px-6 py-4">08:00 - 15:00</td>
+          <tbody class="jadwal-tbody">
+            <tr class="jadwal-tr">
+              <td class="jadwal-td">Dr. Cinta</td>
+              <td class="jadwal-td">Senin - Jumat</td>
+              <td class="jadwal-td">08:00 - 15:00</td>
             </tr>
-            <tr class="hover:bg-gray-50 transition-colors duration-300">
-              <td class="px-6 py-4">Dr. Sehat</td>
-              <td class="px-6 py-4">Senin - Sabtu</td>
-              <td class="px-6 py-4">10:00 - 17:00</td>
+            <tr class="jadwal-tr">
+              <td class="jadwal-td">Dr. Sehat</td>
+              <td class="jadwal-td">Senin - Sabtu</td>
+              <td class="jadwal-td">10:00 - 17:00</td>
             </tr>
           </tbody>
         </table>

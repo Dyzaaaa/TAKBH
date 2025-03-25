@@ -89,9 +89,8 @@ class DataKunjunganController extends Controller
         return view('dokter.dakun-resep', compact('datapasien'));
     }
 
-    public function resepKunjungan($pasien_id)
-    {
-        $datapasien = DataPasien::where('pasien_id', $pasien_id)->first();
-        return view('apoteker.dakun-resep', compact('datapasien'));
-    }
+    public function resepKunjungan(DataPasien $datapasien)
+{
+    return view('apoteker.dakun-resep', compact('datapasien'));
+}
 }

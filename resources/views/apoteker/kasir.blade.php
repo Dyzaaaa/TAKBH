@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Klinik Buah Hati - Kasir</title>
-  @vite(['resources/css/app.css', 'resources/css/custom.css'])
+  @vite(['resources/css/app.css', 'resources/css/custom.css', 'resources/css/tabel.css'])
 
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>

@@ -1,0 +1,122 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    border-radius: 0.5rem;
+    overflow: hidden;
+  }
+
+  /* Header Tabel */
+  thead th {
+    background-color: #ffffff;
+    color: rgb(24, 23, 23);
+    font-weight: 600;
+    padding: 0.75rem;
+    text-align: center;
+    border-bottom: 1px solid #F3F4F6;
+    border-right: 1px solid #F3F4F6;
+  }
+
+  tbody {
+    background-color: white;
+  }
+
+  tbody td {
+    color: #4A5568;
+    padding: 0.75rem;
+    text-align: center;
+    font-size:medium;
+    border-top: 1px solid #F3F4F6; /* Border atas untuk setiap baris */
+    border-right: 1px solid #F3F4F6;
+  }
+
+  tbody tr:hover {
+    background-color: #F7FAFC;
+  }
+  .active {
+    background-color: #f3f4f6; /* Warna yang sama dengan hover */
+    color: #1f2937; /* Warna teks yang sama dengan hover */
+}
+
+.tabel-keuangan-container {
+    background-color: white; /* bg-white */
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1); /* shadow-lg */
+    border-radius: 0.5rem; /* rounded-lg */
+    overflow: hidden; /* overflow-hidden */
+    margin-bottom: 1.5rem; /* mb-6 */
+  }
+  
+  .tabel-keuangan-caption {
+    padding: 1.25rem; /* p-5 */
+    font-size: 1.125rem; /* text-lg */
+    font-weight: 600; /* font-semibold */
+    text-align: left; /* text-left */
+    color: #1E293B; /* text-gray-900 */
+    background-color: #F9FAFB; /* bg-gray-50 */
+  }
+  
+  .tabel-keuangan-caption a {
+    color: #4B5563; /* text-gray-600 */
+    text-decoration: none; /* hilangkan underline default */
+  }
+  
+  .tabel-keuangan-caption a:hover {
+    text-decoration: underline; /* hover:underline */
+  }
+  
+  .tabel-keuangan {
+    width: 100%; /* w-full */
+    text-align: left; /* text-left */
+    color: #6B7280; /* text-gray-500 */
+    border-collapse: collapse; /* border-collapse */
+  }
+  
+  .tabel-keuangan thead {
+    font-size: 0.875rem; /* text-sm */
+    color: #374151; /* text-gray-700 */
+    text-transform: uppercase; /* uppercase */
+    background-color: #F9FAFB; /* bg-gray-50 */
+  }
+  
+  .tabel-keuangan thead th {
+    padding: 0.75rem 1.5rem; /* px-6 py-3 */
+    font-weight: 500;
+  }
+  
+  .tabel-keuangan tbody tr {
+    background-color: white; /* bg-white */
+    border-bottom: 1px solid #E5E7EB; /* border-b */
+    transition-property: background-color, color;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+  }
+  
+  .tabel-keuangan tbody tr:hover {
+    background-color: #F3F4F6; /* hover:bg-gray-50 */
+  }
+  
+  .tabel-keuangan tbody td {
+    padding: 0.75rem 1.5rem; /* px-6 py-4 */
+  }
+  
+  .tabel-keuangan tfoot tr {
+    font-size: 1.125rem; /* text-lg */
+    color: #1E293B; /* text-gray-900 */
+    font-weight: 600; /* font-semibold */
+  }
+  
+  .tabel-keuangan tfoot th {
+    padding: 0.75rem 1.5rem; /* px-6 py-3 */
+    text-align: left; /* text-left */
+  }
+  
+  .tabel-keuangan tfoot td {
+    padding: 0.75rem 1.5rem; /* px-6 py-3 */
+    text-align: left; /* text-left */
+  }
+
