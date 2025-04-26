@@ -22,7 +22,7 @@
       <div class="prescription-header">
         <img src="/images/clinic-logo.png" alt="Klinik Buah Hati" class="clinic-logo">
         <h1 class="prescription-title">Resep Obat Pasien</h1>
-        <p class="prescription-number">No. Resep: {{ date('Ymd') }}-{{ $datapasien->id }}</p>
+        <p class="prescription-number">No. Resep: {{ date('Ymd') }}-{{ $datapasien->id }} <span class="font-medium patient-info-label">Dokter:</span> Dr. Ahmad Fauzi</p>
       </div>
 
       <div class="patient-info-card">
@@ -30,18 +30,20 @@
           <div>
             <h2 class="text-lg font-semibold text-gray-800 mb-2">Informasi Pasien</h2>
             <div class="space-y-2">
-              <p class="text-gray-700"><span class="font-medium patient-info-label">Nama:</span> {{ $datapasien->nama_pasien }}</p>
-              <p class="text-gray-700"><span class="font-medium patient-info-label">Usia:</span> {{ $datapasien->usia }} tahun</p>
+              <p class="text-gray-700"><span class="font-medium patient-info-label">Nama:</span> {{ $datapasien->nama_pasien}}</p>
+              <p class="text-gray-700"><span class="font-medium patient-info-label">Usia:</span> {{ $datapasien->usia}} tahun</p>
               <p class="text-gray-700"><span class="font-medium patient-info-label">NIK:</span> {{ $datapasien->NIK }}</p>
-              <p class="text-gray-700"><span class="font-medium patient-info-label">No. HP:</span> {{ $datapasien->no_hp }}</p>
+              <p class="text-gray-700"><span class="font-medium patient-info-label">No. HP:</span> {{ $datapasien->no_hp}}</p>
             </div>
           </div>
           <div>
             <h2 class="text-lg font-semibold text-gray-800 mb-2">Informasi Medis</h2>
             <div class="space-y-2">
-              <p class="text-gray-700"><span class="font-medium patient-info-label">Tanggal:</span> {{ date('d F Y') }}</p>
-              <p class="text-gray-700"><span class="font-medium patient-info-label">Diagnosis:</span> Migrain</p>
-              <p class="text-gray-700"><span class="font-medium patient-info-label">Dokter:</span> Dr. Ahmad Fauzi</p>
+              <p class="text-gray-700"><span class="font-medium patient-info-label">Tinggi Badan:</span> {{ $datapasien->tinggi_badan ?? '-' }} cm</p>
+              <p class="text-gray-700"><span class="font-medium patient-info-label">Berat Badan:</span> {{ $datapasien->berat_badan ?? '-' }} kg</p>
+              <p class="text-gray-700"><span class="font-medium patient-info-label">Tekanan Darah:</span> {{ $datapasien->tensi ?? '-' }}</p>
+              <p class="text-gray-700"><span class="font-medium patient-info-label">Keluhan:</span> {{ $datapasien->keluhan ?? '-' }}</p>
+              <p class="text-gray-700"><span class="font-medium patient-info-label">Diagnosis:</span> {{ $datapasien->diagnosis ?? 'Belum diisi' }}</p>
             </div>
           </div>
         </div>
@@ -51,12 +53,12 @@
         <h3 class="text-xl font-semibold text-gray-800 mb-4">Resep Obat</h3>
         <div class="space-y-3">
           <div class="medication-item">
-            <input id="med-1" type="checkbox" checked class="medication-checkbox">
+            <input id="med-1" type="checkbox" class="medication-checkbox">
             <label for="med-1" class="medication-label">Paracetamol 500mg</label>
             <span class="medication-dosage">3x sehari setelah makan</span>
           </div>
           <div class="medication-item">
-            <input id="med-2" type="checkbox" checked class="medication-checkbox">
+            <input id="med-2" type="checkbox" class="medication-checkbox">
             <label for="med-2" class="medication-label">Panadol Extra</label>
             <span class="medication-dosage">2x sehari</span>
           </div>
@@ -70,7 +72,7 @@
 
       <div class="mb-6">
         <h3 class="text-lg font-semibold text-gray-800 mb-2">Instruksi Tambahan</h3>
-        <textarea class="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#13C296]" rows="3" placeholder="Tambahkan instruksi khusus..."></textarea>
+        <p class="text-gray-700">{{ $datapasien->instruksi_tambahan ?? 'Tidak ada instruksi tambahan' }}</p>
       </div>
 
       <div class="flex justify-center pt-4 border-t border-gray-200">

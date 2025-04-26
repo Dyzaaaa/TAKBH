@@ -19,11 +19,11 @@
 
   <!-- Konten Utama -->
   <main class="lg:ml-64 md:ml-48 px-4 mb-20">
-    <div class="flex justify-between items-center mb-4">
-      <h1 class="judul-halaman">Riwayat Transaksi Kasir</h1>
-      <a href="{{ route('apoteker.kasir-tambah') }}" class="btn-tambah btn-tambah:hover">
-        + Tambah
-      </a>
+    <div class="flex justify-between items-center ">
+      <h1 class="judul-halaman mb-2">Riwayat Transaksi Kasir</h1>
+      <a href="{{ route('apoteker.dakun-tambah') }}" class="btn-tambah">
+    <i class="fas fa-plus mr-2"></i> Tambah
+    </a>
     </div>
 
     <!-- Tabel Riwayat Transaksi -->

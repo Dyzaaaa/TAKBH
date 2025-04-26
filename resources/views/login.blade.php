@@ -8,7 +8,21 @@
 </head>
 <body class="bg-gray-100">
 
-  @include('layouts.navbar')
+<!-- Navbar -->
+<nav class="fixed top-0 z-50 w-full bg-white border-b shadow-sm">
+  <div class="flex items-center justify-between p-4">
+    <!-- Logo dan Nama Klinik -->
+    <div class="flex items-center space-x-3">
+      <button id="toggleSidebar" class="p-2 text-gray-700 rounded-md sm:hidden">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7"></path>
+        </svg>
+      </button>
+      <span class="text-xl font-semibold text-gray-900">Klinik Buah Hati</span>
+    </div>
+
+
+</nav>
 
   <div class="flex items-center justify-center w-full h-screen bg-gray-100">
     <div class="flex flex-col items-center p-6 bg-white rounded-2xl shadow-md w-[400px]">

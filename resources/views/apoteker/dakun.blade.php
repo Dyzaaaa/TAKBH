@@ -18,10 +18,10 @@
 @include('layouts.apoteker')
 
 <main class="lg:ml-64 md:ml-48 px-4 mb-20">
-  <div class="flex justify-between items-center mb-6">
-    <h1 class="judul-halaman">Antrean Pasien</h1>
+  <div class="flex justify-between items-center ">
+    <h1 class="judul-halaman mb-2">Antrean Pasien</h1>
     <a href="{{ route('apoteker.dakun-tambah') }}" class="btn-tambah">
-      + Tambah
+    <i class="fas fa-plus mr-2"></i> Tambah
     </a>
   </div>
 
@@ -29,33 +29,33 @@
     <table class="antrean-table w-full text-sm">
       <thead>
         <tr>
-          <th class="px-4 py-2">NO</th>
-          <th class="px-4 py-2">NAMA</th>
-          <th class="px-4 py-2">USIA</th>
-          <th class="px-4 py-2">NIK</th>
-          <th class="px-4 py-2">NO. HP</th>
-          <th class="px-4 py-2">TB</th>
-          <th class="px-4 py-2">BB</th>
-          <th class="px-4 py-2">TENSI</th>
-          <th class="px-4 py-2">KELUHAN</th>
-          <th class="px-4 py-2">RESEP</th>
-          <th class="px-4 py-2">AKSI</th>
+          <th class="px-3 py-1.5">NO</th>
+          <th class="px-3 py-1.5">NAMA</th>
+          <th class="px-3 py-1.5">USIA</th>
+          <th class="px-3 py-1.5">NIK</th>
+          <th class="px-3 py-1.5">NO. HP</th>
+          <th class="px-3 py-1.5">TB</th>
+          <th class="px-3 py-1.5">BB</th>
+          <th class="px-3 py-1.5">TENSI</th>
+          <th class="px-3 py-1.5">KELUHAN</th>
+          <th class="px-3 py-1.5">RESEP</th>
+          <th class="px-3 py-1.5">AKSI</th>
         </tr>
       </thead>
       <tbody>
         @foreach ($datapasien as $k)
-        <tr class="border-b dark:border-gray-700">
-          <td class="px-4 py-2">{{ $loop->iteration }}</td>
-          <td class="px-4 py-2">{{ $k->nama_pasien }}</td>
-          <td class="px-4 py-2">{{ $k->usia }}</td>
-          <td class="px-4 py-2">{{ $k->NIK }}</td>
-          <td class="px-4 py-2">{{ $k->no_hp }}</td>
-          <td class="px-4 py-2">{{ $k->tinggi_badan ?? '-' }}</td>
-          <td class="px-4 py-2">{{ $k->berat_badan ?? '-' }}</td>
-          <td class="px-4 py-2">{{ $k->tensi ?? '-' }}</td>
-          <td class="px-4 py-2">{{ $k->keluhan ?? '-' }}</td>
-          <td class="px-4 py-2">
-            <a href="{{ route('apoteker.dakun-resep', $k->pasien_id) }}" class="btn-action btn-resep"><i class="fas fa-file-alt"></i>Resep</a>
+        <tr class="border-b">
+          <td class="px-3 py-1.5">{{ $loop->iteration }}</td>
+          <td class="px-3 py-1.5">{{ $k->nama_pasien }}</td>
+          <td class="px-3 py-1.5">{{ $k->usia }}</td>
+          <td class="px-3 py-1.5">{{ $k->NIK }}</td>
+          <td class="px-3 py-1.5">{{ $k->no_hp }}</td>
+          <td class="px-3 py-1.5">{{ $k->tinggi_badan ?? '-' }}</td>
+          <td class="px-3 py-1.5">{{ $k->berat_badan ?? '-' }}</td>
+          <td class="px-3 py-1.5">{{ $k->tensi ?? '-' }}</td>
+          <td class="px-3 py-1.5">{{ $k->keluhan ?? '-' }}</td>
+          <td class="px-3 py-1.5">
+            <a href="{{ route('apoteker.dakun-resep', $k->pasien_id) }}" class="btn-action btn-resep"><i class="fas fa-file-alt"></i>Cek Resep</a>
           </td>
           <td class="px-2 py-2">
             <a href="{{ route('apoteker.dakun-edit', $k->pasien_id) }}" class="btn-action btn-edit m-1">

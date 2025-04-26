@@ -18,10 +18,10 @@
 @include('layouts.apoteker')
 
 <main class="lg:ml-64 md:ml-48 px-4 mb-20">
-  <div class="flex justify-between items-center mb-6">
-    <h1 class="judul-halaman">Tabel Pemasukan</h1>
-    <a href="{{ route('apoteker.tambahpemasukan') }}" class="btn-tambah">
-      + Tambah
+  <div class="flex justify-between items-center ">
+    <h1 class="judul-halaman mb-2">Tabel Pemasukan</h1>
+    <a href="{{ route('apoteker.dakun-tambah') }}" class="btn-tambah">
+    <i class="fas fa-plus mr-2"></i> Tambah
     </a>
   </div>
 

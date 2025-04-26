@@ -55,8 +55,7 @@
         </div>
         <div class="mb-4">
           <label for="tekanan_darah" class="form-label">Tekanan Darah</label>
-          <input type="text" id="tekanan_darah" name="tekanan_darah" placeholder="" class="form-input" pattern="^\d+/\d+$" title="Format tekanan darah harus angka/angka (contoh: 120/80)">
-          <p class="form-input-note">Format: angka/angka</p>
+          <input type="text" id="tekanan_darah" name="tekanan_darah" placeholder="Format: angka/angka" class="form-input" pattern="^\d+/\d+$"">
         </div>
         <div class="mb-6">
           <label for="keluhan" class="form-label">Keluhan</label>

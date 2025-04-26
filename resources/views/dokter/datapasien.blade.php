@@ -19,7 +19,7 @@
   @include('layouts.dokter')
 
   <main class="lg:ml-64 md:ml-48 px-4 mb-20">
-      <h1 class="judul-halaman">Data Pasien Terdaftar</h1>
+      <h1 class="judul-halaman mb-2">Data Pasien Terdaftar</h1>
 </div>
 <div>
         <label for="table-search" class="sr-only">Search</label>
@@ -34,7 +34,7 @@
     </div>
     <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
     <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400 ">
-        <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+        <thead>
             <tr>
                 <th scope="col" class="px-6 py-3">
                     NO
@@ -61,26 +61,27 @@
         </thead>
         <tbody>
             @foreach ($datapasien as $k)
-            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200 hover:bg-gray-50 dark:hover:bg-gray-600">
-                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+            <tr class>
+                <td class="px-3 py-2">
                     {{ $loop->iteration}}
-                </th>
-                <td class="px-6 py-4">
+                </td>
+                <td class="px-3 py-2">
                     {{ $k->nama_pasien}}
                 </td>
-                <td class="px-6 py-4">
+                <td class="px-3 py-2">
                     {{ $k->NIK}}
                 </td>
-                <td class="px-6 py-4">
+                <td class="px-3 py-2">
                     {{ $k->no_hp}}
-                </td><td class="px-6 py-4">
+                </td><td class="px-3 py-2">
                     {{ $k->tanggal_lahir}}
                 </td>
-                <td class="px-6 py-4">
+                <td class="px-3 py-2">
                     {{ $k->usia}}
                 </td>
-                <td class="px-6 py-4">
-                    <a href="rekammedis" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Rekam Medis</a>
+                <td class="px-3 py-2">
+                <a href="{{ route('dokter.rekammedis', $k->pasien_id) }}" class="btn-rekam-medis">
+                    <i class="fas fa-file-medical mr-2"></i> Rekam Medis</a>
                 </td>
             </tr>
             @endforeach

@@ -20,7 +20,7 @@
 
   <main class="lg:ml-64 md:ml-48 px-4 mb-20">
     <div>
-      <h1 class="judul-halaman">Jadwal Dokter</h1>
+      <h1 class="judul-halaman mb-2">Jadwal Dokter</h1>
     </div>
 
 <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
@@ -43,9 +43,9 @@
         </thead>
         <tbody>
             <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
-                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                <td scope="row" class="px-6 py-4">
                     8 Februari 2025
-                </th>
+                </td>
                 <td class="px-6 py-4">
                     Dr. Malfoy
                 </td>

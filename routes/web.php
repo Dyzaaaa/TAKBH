@@ -54,9 +54,7 @@ Route::get('/dokter/jadwal', function () {
     return view('dokter.jadwal');
 })->name('dokter.jadwal');
 
-Route::get('/dokter/rekammedis', function () {
-    return view('dokter.rekammedis');
-})->name('dokter.rekammedis');
+Route::get('/dokter/rekammedis/{pasien_id}', [DataKunjunganController::class, 'rekamMedisDokter'])->name('dokter.rekammedis');
 
 Route::get('/dokter/resep', function () {
     return view('dokter.resep');

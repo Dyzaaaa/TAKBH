@@ -49,7 +49,7 @@
 </nav>
 
 <!-- Sidebar -->
-<aside id="sidebar" class="fixed left-0 w-64 h-full pb-10 top-5 mt-5 bg-white border-r shadow-lg transition-transform sm:translate-x-0 -translate-x-full z-30">
+<aside id="sidebar" class="fixed left-0 w-64 h-full pb-10 top-8 mt-5 bg-white border-r shadow-lg transition-transform sm:translate-x-0 -translate-x-full z-30">
     <div class="h-full flex flex-col p-4">
         <!-- Menu -->
         <nav class="flex-1 mt-4">

@@ -21,7 +21,7 @@
   <main class="lg:ml-64 md:ml-48 px-4 mb-20">
 
     <section>
-      <h1 class="judul-halaman">Statistik</h1>
+      <h1 class="judul-halaman mb-2">Statistik</h1>
       <div class="statistik-card-grid">
       <div class="statistik-card statistik-card-1">
           <h2 class="statistik-angka">400</h2>
@@ -70,7 +70,7 @@
     </section>
 
     <section class="mt-8">
-      <h2 class="judul-halaman">Jadwal Apoteker</h2>
+      <h2 class="judul-halaman mb-2">Jadwal Apoteker</h2>
       <div class="jadwal-container">
         <table class="jadwal-table">
           <thead class="jadwal-thead">
