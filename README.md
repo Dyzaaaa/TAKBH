@@ -11,11 +11,11 @@ Built to help clinic staff manage information efficiently while providing patien
 - **Optimized Performance** – Fast loading times and smooth navigation.
 
 ## 🛠️ Tech Stack
-HTML5
-Tailwind CSS
-JavaScript
-PHP (Laravel Framework)
-Blade (Laravel Templating Engine)
+- HTML5
+- Tailwind CSS
+- JavaScript
+- PHP (Laravel Framework)
+- Blade (Laravel Templating Engine)
 
 ## 📄 Modul
 https://drive.google.com/file/d/11rqn2eWnP4da1gIV2_7qhYTNtjNahYxB/view?usp=sharing
